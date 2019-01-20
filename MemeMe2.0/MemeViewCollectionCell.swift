@@ -11,6 +11,10 @@ import UIKit
 
 class MemeViewCollectionCell: UICollectionViewCell {
     
-    @IBOutlet weak var villainImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet var top: UILabel!
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var bottom: UILabel!
+    
+    
 }

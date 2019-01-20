@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 struct Meme {
     
-    let top: String
-    let bottom: String
-    let origImage: String
-    let finalImage: String
+    var top: String
+    var bottom: String
+    var origImage: UIImage
+    var finalImage: UIImage
     
 }

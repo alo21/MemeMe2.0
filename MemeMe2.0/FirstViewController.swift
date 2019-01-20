@@ -1,26 +1,32 @@
 //
-//  MemeViewController.swift
+//  FirstViewController.swift
 //  MemeMe2.0
 //
-//  Created by Alessandro Losavio on 1/11/19.
+//  Created by Alessandro Losavio on 1/20/19.
 //  Copyright © 2019 Losavio. All rights reserved.
 //
 
 import UIKit
+import Foundation
 
-class MemeViewController: UIViewController {
-    
-    
-    var meme : Meme!
+class FirstViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem (title: "Start Over", style: .plain, target: self, action: #selector(createNewMeme))
+        
     }
+        
+        
+    @objc func createNewMeme() {
+            
+        }
     
+
     /*
     // MARK: - Navigation
+     
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
