@@ -13,9 +13,7 @@ class MemeDetailViewController: UIViewController {
     var meme: Meme!
     
     
-    @IBOutlet weak var top: UILabel!
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var bottom: UILabel!
 
     
     
@@ -31,8 +29,7 @@ class MemeDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.top.text = self.meme.top
-        self.bottom.text = self.meme.bottom
+        
 
         self.tabBarController?.tabBar.isHidden = true
         

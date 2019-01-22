@@ -17,21 +17,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return appDelegate.memes
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //TODO: Implement flowLayout here.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(memes.count)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.memes.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell")!
-        let meme = self.memes[(indexPath as NSIndexPath).row] 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell2", for: indexPath)
+        let meme = self.memes[indexPath.row]
         
         // Set the name and image
         cell.textLabel?.text = meme.top + "..." + meme.bottom
+        print(meme.top + "..." + meme.bottom)
         cell.imageView?.image = meme.finalImage
         
         return cell
     }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

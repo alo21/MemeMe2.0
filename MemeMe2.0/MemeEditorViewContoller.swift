@@ -68,6 +68,14 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
     }
     
+    
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        
+       print("back pressed")
+
+        dismiss(animated: true, completion: nil)
+    }
+    
     func setTextAttr(content : String, textField : UITextField){
         
         textField.attributedPlaceholder = NSAttributedString(string: content, attributes: memeTextAttributes)
@@ -100,11 +108,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
-        if sender == TakeButton {
-            imagePicker.sourceType = .camera
-        } else {
-            imagePicker.sourceType = .photoLibrary
-        }
+        imagePicker.sourceType = sender == TakeButton ? .camera : .photoLibrary
         
         present(imagePicker, animated: true, completion: nil)
         

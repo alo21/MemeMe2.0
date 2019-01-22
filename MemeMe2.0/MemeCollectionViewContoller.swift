@@ -12,6 +12,7 @@ import UIKit
 
 class MemeCollectionViewController: UICollectionViewController{
     
+    @IBOutlet weak var flowLayout : UICollectionViewFlowLayout!
     
     var memes: [Meme]! {
         let object = UIApplication.shared.delegate
@@ -25,25 +26,42 @@ class MemeCollectionViewController: UICollectionViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         
+        collectionView!.reloadData()
+        
+        let space:CGFloat = 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         print(memes.count)
-        //TODO: Implement flowLayout here.
         
-}
+        collectionView!.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.memes.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeViewCollectionCell", for: indexPath) as! MemeViewCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MemeViewCollectionCell
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
         // Set the name and image
-        cell.top.text = meme.top
-        cell.image.image = meme.finalImage
-        cell.bottom.text = meme.bottom
+        
+        
+        cell.imageMiddle.image = meme.finalImage
         //cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
         
         return cell
