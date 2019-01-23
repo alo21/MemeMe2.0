@@ -49,12 +49,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="91" height="71"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="De5-Rt-T6T" userLabel="ImageMiddle">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="De5-Rt-T6T" userLabel="ImageMiddle">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="65"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="De5-Rt-T6T" firstAttribute="leading" secondItem="uRp-Yp-g7B" secondAttribute="leading" id="541-4q-P9S"/>
+                                    <constraint firstAttribute="bottom" secondItem="De5-Rt-T6T" secondAttribute="bottom" constant="6" id="9Hg-bd-UsA"/>
+                                    <constraint firstItem="De5-Rt-T6T" firstAttribute="top" secondItem="uRp-Yp-g7B" secondAttribute="top" id="ecG-M0-8en"/>
+                                    <constraint firstAttribute="trailing" secondItem="De5-Rt-T6T" secondAttribute="trailing" constant="11" id="gYq-6L-G7r"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="imageMiddle" destination="De5-Rt-T6T" id="o4Z-2S-9mj"/>
                                 </connections>
@@ -100,8 +105,8 @@
                                             <rect key="frame" x="16" y="2" width="41" height="38"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhD-T5-hoH">
-                                            <rect key="frame" x="81" y="11" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhD-T5-hoH">
+                                            <rect key="frame" x="81" y="11" width="0.0" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -203,14 +208,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cht-lI-k5D" userLabel="Image">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cht-lI-k5D" userLabel="Image">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Cht-lI-k5D" firstAttribute="bottom" secondItem="jmK-6y-Vh5" secondAttribute="bottom" id="8T5-lh-XKt"/>
                             <constraint firstItem="Cht-lI-k5D" firstAttribute="centerX" secondItem="8lg-KL-Rwb" secondAttribute="centerX" id="FO3-Qd-vYc"/>
+                            <constraint firstItem="Cht-lI-k5D" firstAttribute="top" secondItem="jmK-6y-Vh5" secondAttribute="top" id="Y1o-XS-GEH"/>
                             <constraint firstItem="Cht-lI-k5D" firstAttribute="centerY" secondItem="8lg-KL-Rwb" secondAttribute="centerY" id="ehA-Sh-3Dj"/>
+                            <constraint firstItem="Cht-lI-k5D" firstAttribute="trailing" secondItem="jmK-6y-Vh5" secondAttribute="trailing" id="mZd-D9-jxY"/>
+                            <constraint firstItem="Cht-lI-k5D" firstAttribute="leading" secondItem="jmK-6y-Vh5" secondAttribute="leading" id="pE1-0n-IpB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jmK-6y-Vh5"/>
                     </view>

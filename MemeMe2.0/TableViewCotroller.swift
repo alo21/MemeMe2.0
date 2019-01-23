@@ -24,7 +24,7 @@ class TableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print(memes.count)
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
@@ -45,7 +45,6 @@ class TableViewController: UITableViewController {
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
         cell.textLabel?.text = meme.top + "..." + meme.bottom
-        print(meme.top + "..." + meme.bottom)
         cell.imageView?.image = meme.finalImage
         
         return cell

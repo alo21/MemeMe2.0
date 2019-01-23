@@ -71,8 +71,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func back(_ sender: UIBarButtonItem) {
         
-       print("back pressed")
-
+        print("back pressed")
+        
         dismiss(animated: true, completion: nil)
     }
     
@@ -253,4 +253,5 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     
 }
+
 
